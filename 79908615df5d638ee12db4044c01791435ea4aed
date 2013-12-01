@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b8ed5af_995d4c4c",
+        "filename": "res/values-ru/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2013-12-01T13:55:51Z",
+      "side": 1,
+      "message": "if we want this to be translatable the translatable\u003d\"false\" must be removed from the \"global\" strings.xml also",
+      "revId": "79908615df5d638ee12db4044c01791435ea4aed",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
