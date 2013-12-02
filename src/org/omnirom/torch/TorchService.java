@@ -172,7 +172,7 @@ public class TorchService extends Service {
 
 		PendingIntent turnOff = PendingIntent.getBroadcast(this, 0,
 				new Intent(TorchSwitch.TOGGLE_FLASHLIGHT), 0);
-		mNotificationBuilder.addAction(R.drawable.torch_off,
+		mNotificationBuilder.addAction(R.drawable.ic_launcher,
 				getString(R.string.not_torch_toggle), turnOff);
 
 		mNotification = mNotificationBuilder.getNotification();
