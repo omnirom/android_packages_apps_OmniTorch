@@ -52,4 +52,7 @@
     <string name="not_torch_title">Torch on</string>
     <string name="not_torch_toggle">Turn torch off</string>
 
+    <string name="label_brightmode">Bright</string>
+    <string name="toast_brightmode_enable">Bright Mode is enabled now</string>
+    <string name="toast_brightmode_disable">Bright Mode is disabled now</string>
 </resources>

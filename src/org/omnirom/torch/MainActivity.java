@@ -38,6 +38,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "TorchActivity";
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
 	private boolean mTorchOn;
 	private Context mContext;
 	private SharedPreferences mPrefs;
+    private boolean BrightMode;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -86,7 +88,8 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(TorchSwitch.TOGGLE_FLASHLIGHT);
 		intent.putExtra("strobe", mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
 		intent.putExtra("period", mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
-		intent.putExtra("bright", mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
+		//intent.putExtra("bright", mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
+        intent.putExtra("bright", BrightMode); //TODO: Temporary, will read settings later
 		intent.putExtra("sos", mPrefs.getBoolean(SettingsActivity.KEY_SOS, false));
 		mContext.sendBroadcast(intent);
 	}
@@ -142,6 +145,29 @@ public class MainActivity extends Activity {
 		case R.id.action_settings:
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivityIfNeeded(intent, -1);
+            case R.id.action_bright:
+                if (BrightMode)
+                {
+                    //Disabling flash if it's enabled
+                    if (mTorchOn) {
+                        createIntent();
+                    }
+                    BrightMode = false;
+                    Toast.makeText(getApplicationContext(), getString(R.string.toast_brightmode_disable),
+                            Toast.LENGTH_LONG).show();
+                    createIntent(); //Enabling it again
+                }
+                else {
+                    //Disabling flash if it's enabled
+                    if (mTorchOn) {
+                        createIntent();
+                    }
+                    BrightMode = true;
+                    Toast.makeText(getApplicationContext(), getString(R.string.toast_brightmode_enable),
+                            Toast.LENGTH_LONG).show();
+                    createIntent(); //Enabling it again
+                }
+                return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
