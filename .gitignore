@@ -1,4 +1,8 @@
 .classpath
 .project
+.gitignore
 bin/
 gen/
+out/
+.idea/
+*.iml

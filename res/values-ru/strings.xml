@@ -47,4 +47,8 @@
     <string name="setting_add_widget">Добавить виджет</string>
     <string name="not_torch_title">Включить фонарик</string>
     <string name="not_torch_toggle">Выключить фонарик</string>
+
+    <string name="label_brightmode">Яркий режим</string>
+    <string name="toast_brightmode_enable">Яркий режим включен</string>
+    <string name="toast_brightmode_disable">Яркий режим выключен</string>
 </resources>
