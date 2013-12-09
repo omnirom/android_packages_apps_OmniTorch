@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_492bf4da",
+        "filename": "src/org/omnirom/torch/MainActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1000106
+      },
+      "writtenOn": "2013-12-09T20:46:28Z",
+      "side": 1,
+      "message": "Indent",
+      "revId": "65051863b17773ace81f3f7b3f1d5107743cf223",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_0911ecb2",
+        "filename": "src/org/omnirom/torch/MainActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1000106
+      },
+      "writtenOn": "2013-12-09T20:46:28Z",
+      "side": 1,
+      "message": "Keep braces on statement line",
+      "revId": "65051863b17773ace81f3f7b3f1d5107743cf223",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_2916a8aa",
+        "filename": "src/org/omnirom/torch/MainActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1000106
+      },
+      "writtenOn": "2013-12-09T20:46:28Z",
+      "side": 1,
+      "message": "Line wrapping",
+      "revId": "65051863b17773ace81f3f7b3f1d5107743cf223",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
