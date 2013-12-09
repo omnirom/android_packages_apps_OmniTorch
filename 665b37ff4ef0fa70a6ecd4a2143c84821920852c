@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_e9912055",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2013-12-09T17:07:25Z",
+      "side": 1,
+      "message": "Google recomienda usar siempre la forma \"más educada\":\n\"Por favor, reinicie la aplicación\".",
+      "revId": "665b37ff4ef0fa70a6ecd4a2143c84821920852c",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
