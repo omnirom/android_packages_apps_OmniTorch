@@ -38,6 +38,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "TorchActivity";
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
 	private boolean mTorchOn;
 	private Context mContext;
 	private SharedPreferences mPrefs;
+    private boolean BrightMode;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -142,6 +144,37 @@ public class MainActivity extends Activity {
 		case R.id.action_settings:
 			Intent intent = new Intent(this, SettingsActivity.class);
 			startActivityIfNeeded(intent, -1);
+            case R.id.action_bright:
+                if (mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false))
+                {
+                    //Disabling flash if it's enabled
+                    Boolean wasOn = mTorchOn;
+                    if (mTorchOn) {
+                        createIntent();
+                    }
+                    mPrefs.edit().putBoolean(SettingsActivity.KEY_BRIGHT, false).commit();
+                    Toast.makeText(mContext, getString(R.string.toast_brightmode_disable),
+                            Toast.LENGTH_LONG).show();
+                    Log.v(TAG, "Bright off");
+
+                    if (wasOn)
+                        createIntent(); //Enabling it again
+                }
+                else {
+                    Boolean wasOn = mTorchOn;
+                    //Disabling flash if it's enabled
+                    if (mTorchOn) {
+                        createIntent();
+                    }
+                    mPrefs.edit().putBoolean(SettingsActivity.KEY_BRIGHT, true).commit();
+                    Toast.makeText(mContext, getString(R.string.toast_brightmode_enable),
+                            Toast.LENGTH_LONG).show();
+                    Log.v(TAG, "Bright on");
+
+                    if (wasOn) //Do not enable it, if it was disabled before
+                        createIntent(); //Enabling it again
+                }
+                return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
