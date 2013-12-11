@@ -19,25 +19,15 @@ package org.omnirom.torch;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ImageView;
 import android.util.Log;
+import android.view.*;
+import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.LinearInterpolator;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -68,11 +58,33 @@ public class MainActivity extends Activity {
 				);
 		}
 		setContentView(R.layout.mainnew);
+
 		mContext = this.getApplicationContext();
 		mButtonOnView = (ImageView) findViewById(R.id.buttoOnImage);
-
 		mButtonOnView.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+                //Animate
+                if (mTorchOn){
+                    //Turning off
+                    AlphaAnimation anim = new AlphaAnimation((float) 1,(float) 0.5);
+                    anim.setInterpolator(new LinearInterpolator());
+                    anim.setRepeatCount(0);
+                    anim.setDuration(400);
+                    anim.setFillAfter(true);
+                    mButtonOnView.setAnimation(anim);
+                    mButtonOnView.startAnimation(anim);
+                }
+                else
+                {
+                    //Turning on
+                    AlphaAnimation anim = new AlphaAnimation((float) 0.5,(float) 1);
+                    anim.setInterpolator(new LinearInterpolator());
+                    anim.setRepeatCount(0);
+                    anim.setDuration(400);
+                    anim.setFillAfter(true);
+                    mButtonOnView.setAnimation(anim);
+                    mButtonOnView.startAnimation(anim);
+                }
 				createIntent();
 			}
 		});
