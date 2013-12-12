@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_9acd3c8a",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2013-12-12T16:54:13Z",
+      "side": 1,
+      "message": "remove all red :)",
+      "revId": "a182db7693051677a2ecb0e0eb0820febaa08461",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_7ad07024",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2013-12-12T16:54:13Z",
+      "side": 1,
+      "message": "please remove that whitespace",
+      "revId": "a182db7693051677a2ecb0e0eb0820febaa08461",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
