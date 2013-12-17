@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_6e9eed59",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "Hier staat een onnodige spatie",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_8e9b3967",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "Vertaler hoort geen onderdeel van de license te zijn",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_aea8f574",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "...en begon (tijdelijk) te knipperen na...",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_cea5419d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "Nee, bedankt",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_eeb2fde4",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "Accoord",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_0eb809c2",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000123
+      },
+      "writtenOn": "2013-12-17T06:43:22Z",
+      "side": 1,
+      "message": "Knipperfrequentie",
+      "revId": "1e9d0c144eefbe552e58a480c0f1a91e322d5220",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
