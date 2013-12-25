@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013 The OmniROM Project
+  parts by Copyright 2013, The CyanogenMod Project
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">手电筒</string>
+    <string name="about_title">关于</string>
+    <string name="about_close">关闭</string>
+
+    <string name="description">这个软件将会使用你的闪光灯。 \n</string>
+    <string name="warning">警告：长时间使用可能导致你的闪光灯烧毁！</string>
+    <string name="license">Original code from Nexus One Torch by Ben Buxton, released under the GPL, v3.\nhttp://n1torch.googlecode.com/\n\nModified for OmniRom by Max Weninger</string>
+    <string name="warning_label">警告</string>
+    <string name="brightwarn">高亮模式在 &#189; 小时中测试正常,但是发热量较大, 切勿长时间使用。 \n\n点击 &#8220;接受&#8221; 如果你想使用的话.</string>
+    <string name="brightwarn_negative">不，谢谢</string>
+    <string name="brightwarn_accept">接受</string>
+
+    <string name="label_on">开</string>
+    <string name="label_off">关</string>
+    <string name="label_high">高亮</string>
+    <string name="label_strobe">标准</string>
+    <string name="label_sos">S.O.S</string>
+    
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="widget_options">插件设置</string>
+    <string name="setting_title_common">正常</string>
+    <string name="setting_restart">请重启本应用</string>
+    <string name="setting_fullscreen">全屏</string>
+    <string name="setting_bright">亮度</string>
+    <string name="setting_sos">S.O.S</string>
+    <string name="setting_strobe">频闪</string>
+    <string name="setting_frequency_title">频繁频闪</string>
+    <string name="setting_frequency_dialog">频繁</string>
+    <string name="setting_frequency_hz"> Hz</string>
+    <string name="setting_add_widget">添加小部件</string>
+
+    <string name="not_torch_title">打开手电筒</string>
+    <string name="not_torch_toggle">关闭手电筒</string>
+
+</resources>
