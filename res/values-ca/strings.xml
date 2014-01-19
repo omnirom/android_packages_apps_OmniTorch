@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 The OmniROM Project
+parts by Copyright 2013, The CyanogenMod Project
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Llanterna</string>
+    <string name="about_title">Quant a</string>
+    <string name="about_close">Tanca</string>
+
+    <string name="description">Aquest programa manipula el LED de la càmera.\n</string>
+    <string name="warning">Avís: Si s\'engega el LED massa estona es pot sobreescalfar.\n\nLa brillantor màxima &#8220;activada&#8221; s\'ha provat durant &#189; hora, però hi ha el risc que pugui fer malbé el LED.\n</string>
+    <string name="license">Codi original de la Nexus One Torch per Ben Buxton, publicat sota GPL, v3.\nhttp://n1torch.googlecode.com/\n\nModificat per a l\'OmniRom per Max Weninger</string>
+    <string name="warning_label">Avís</string>
+    <string name="brightwarn">La brillantor màxima s\'ha provat amb èxit durant &#189; hora de funcionament, però es va escalfar bastant i va començar a parpellejar (temporalment) als 45 minuts. No es coneixen els efectes a llarg termini.\n\nFeu clic a &#8220;Accepto&#8221; si la voleu utilitzar sota la vostra responsabilitat.</string>
+    <string name="brightwarn_negative">No, gràcies</string>
+    <string name="brightwarn_accept">Accepto</string>
+
+    <string name="label_on">Activada</string>
+    <string name="label_off">Desactivada</string>
+    <string name="label_high">Màxima</string>
+    <string name="label_strobe">Estroboscòpica</string>
+    <string name="label_sos">S.O.S</string>
+    
+    <string name="settings">Configuració</string>
+    <string name="about">Quant a</string>
+    <string name="widget_options">Opcions de l\'estri</string>
+    <string name="setting_title_common">Comú</string>
+    <string name="setting_restart">Reinicieu l\'aplicació</string>
+    <string name="setting_fullscreen">Pantalla completa</string>
+    <string name="setting_bright">Brillantor màxima</string>
+    <string name="setting_sos">S.O.S</string>
+    <string name="setting_strobe">Flash estroboscòpic</string>
+    <string name="setting_frequency_title">Freqüència estroboscòpica</string>
+    <string name="setting_frequency_dialog">Freqüència</string>
+    <string name="setting_frequency_hz"> Hz</string>
+    <string name="setting_add_widget">Afegeix l\'estri</string>
+
+    <string name="not_torch_title">Llanterna activada</string>
+    <string name="not_torch_toggle">Desactiva la llanterna</string>
+
+</resources>
