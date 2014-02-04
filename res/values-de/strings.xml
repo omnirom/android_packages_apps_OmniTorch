@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013 The OmniROM Project
+  parts by Copyright 2013, The CyanogenMod Project
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Taschenlampe</string>
+    <string name="about_title">Über</string>
+    <string name="about_close">Schließen</string>
+
+    <string name="description">Diese App manipuliert die Camera LED\n</string>
+    <string name="warning">Warnung: Langes Anlassen der LED führt zur Überhitzung.\n\nFull Helligkeit &#8220;always on&#8221; wurde getestet für  &#189; Stunden, aber es könnte trotzdem die LED beschädigen.\n</string>
+    <string name="license">Originaler Code von Nexus One Torch by Ben Buxton, veröffentlicht unter der GPL, v3.\nhttp://n1torch.googlecode.com/\n\nModifiziert für OmniRom von Max Weninger</string>
+    <string name="warning_label">Warnung</string>
+    <string name="brightwarn">Volle Helligkeit wurde erfolgreich getestet für &#189; Betriebsstunden, wurde aber ziemlich heiß, und flickerte zweitweise (ab 45min). Folgen von längerem Betrieb unbekannt.\n\nClick &#8220;Akzeptieren&#8221; wenn Sie es auf Ihre eigene Verantwortung nutzen wollen.</string>
+    <string name="brightwarn_negative">Nein Danke</string>
+    <string name="brightwarn_accept">Akzeptieren</string>
+
+    <string name="label_on">An</string>
+    <string name="label_off">Aus</string>
+    <string name="label_high">Hoch</string>
+    <string name="label_strobe">Strobe</string>
+    <string name="label_sos">S.O.S</string>
+    
+    <string name="settings">Einstellungen</string>
+    <string name="about">Über</string>
+    <string name="widget_options">Widget Optionen</string>
+    <string name="setting_title_common">Common</string>
+    <string name="setting_restart">Bitte starten Sie die App neu</string>
+    <string name="setting_fullscreen">Fullscreen</string>
+    <string name="setting_bright">Hell</string>
+    <string name="setting_sos">S.O.S</string>
+    <string name="setting_strobe">Strobe flash</string>
+    <string name="setting_frequency_title">Strobe Frequenz</string>
+    <string name="setting_frequency_dialog">Frequenz</string>
+    <string name="setting_frequency_hz"> Hz</string>
+    <string name="setting_add_widget">Widget hinzufügen</string>
+
+    <string name="not_torch_title">Taschenlampe anschalten</string>
+    <string name="not_torch_toggle">Taschenlampe ausschalten</string>
+
+</resources>
