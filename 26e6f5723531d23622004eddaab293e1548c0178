@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab62b9bd_efa83c8b",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2014-02-05T22:30:34Z",
+      "side": 1,
+      "message": "\"beeinflusst\" nach neuer Rechtschreibung, oder?\nAnsonsten ok.",
+      "revId": "26e6f5723531d23622004eddaab293e1548c0178",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
