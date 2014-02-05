@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab62b9bd_ef911c55",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2014-02-05T22:51:25Z",
+      "side": 1,
+      "message": "ak­zep­tie­ren , klein (?) und das \"t\" ist zu viel nach \"ak\", tut mir leid, zu spaet gesehen.",
+      "revId": "58afecc9dc58c365f41ccf4a339cb0c8bbe146b1",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab62b9bd_0f873016",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2014-02-05T22:51:25Z",
+      "side": 1,
+      "message": "Ak­zep­tie­ren , das \"t\" ist zu viel nach \"Ak\"",
+      "revId": "58afecc9dc58c365f41ccf4a339cb0c8bbe146b1",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
