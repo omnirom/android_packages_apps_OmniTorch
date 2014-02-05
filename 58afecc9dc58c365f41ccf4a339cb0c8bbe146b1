@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "ab62b9bd_4f8128fe",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2014-02-05T22:54:20Z",
+      "side": 1,
+      "message": "(...)aber es besteht das Risiko, dass die LED beschädigt wird.\n\nKomma und dass mit 2x s?\n\nBin mir nich 100% sicher - ich hasse Grammatik :D",
+      "revId": "58afecc9dc58c365f41ccf4a339cb0c8bbe146b1",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ab62b9bd_ef911c55",
         "filename": "res/values-de/strings.xml",
         "patchSetId": 4
