@@ -31,7 +31,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <string name="label_high">Màxima</string>
     <string name="label_strobe">Estroboscòpica</string>
     <string name="label_sos">S.O.S</string>
-    
+
     <string name="settings">Configuració</string>
     <string name="about">Quant a</string>
     <string name="widget_options">Opcions de l\'estri</string>
