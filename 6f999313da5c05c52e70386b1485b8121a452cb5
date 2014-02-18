@@ -16,6 +16,24 @@
       "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b77b57d_5f5d6748",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000293
+      },
+      "writtenOn": "2014-02-18T20:16:54Z",
+      "side": 1,
+      "message": "That\u0027s how names in \"Instrumental case\"[1] are formed in Czech. The original translation did it for your last name, but not for the first, so it looked weird.\n\n[1]: http://en.wikipedia.org/wiki/Instrumental_case (the link is here because I\u0027m not sure how should I call it in English, not because I think you don\u0027t know what it is)",
+      "parentUuid": "8b77b57d_9f4e1f99",
+      "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
     }
   ]
 }
