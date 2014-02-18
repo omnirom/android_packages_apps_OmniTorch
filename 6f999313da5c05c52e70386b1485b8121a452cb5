@@ -34,6 +34,24 @@
       "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b77b57d_9f337f11",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2014-02-18T20:26:48Z",
+      "side": 1,
+      "message": "There are no valid translation for a humans native name :)\nYou have also nor translated Ben Buxton",
+      "parentUuid": "8b77b57d_5f5d6748",
+      "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
     }
   ]
 }
