@@ -52,6 +52,24 @@
       "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b77b57d_df3df7da",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000293
+      },
+      "writtenOn": "2014-02-18T20:52:15Z",
+      "side": 1,
+      "message": "Yes, there are. While it may look kinda weird for foreign names, it is part of the Czech language and is often used in news, newspapers and books. Look at the linked news articles below. Ben\u0027s name is in the original form because it\u0027s in \"Nominative case\" (\"author _is_ Ben Buxton\"), but yours is in the \"Instrumental case\" (\"Modified ... _by_ Max Weninger\").\n\n1. http://www.denik.cz/ze_sveta/snowden-byl-zvolen-zastupcem-studentu-univerzity-v-glasgowe-20140218.html - article about Edward Snowden and his shenaningans, you can search for \"Snowden\", you\u0027ll see forms \"Snowdena\" and \"Snowdenovi\".\n\n2. http://www.denik.cz/ze_sveta/soud-ocistil-moderatora-bbc-od-obzaloby-ze-sexualniho-zneuzivani-20140213.html - Something about BBC\u0027s host, Dave Lee Travis - you can see multiple examples in this one:\n* Dave Lee Travis -\u003e Davea Leeho Travise\n* Jimmy Savile -\u003e Jimmyho Savilea\n* Rolf Harris -\u003e Rolfa Harrise\n* Jim Davidson -\u003e Jima Davidsona\n* Max Clifforda -\u003e Maxe Clifforda\n\n(Some, but not all examples here are of Czech equivalent of \"possessive form\" rather than cases, but the principle is similar).\n\nI can of course change the sentence so that your name remains in original form if that is what you wish, but this way it is already correct and doesn\u0027t look wrong nor weird to Czechs.",
+      "parentUuid": "8b77b57d_9f337f11",
+      "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
     }
   ]
 }
