@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b77b57d_9f4e1f99",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2014-02-18T19:38:24Z",
+      "side": 1,
+      "message": "Thats not my name :)",
+      "revId": "6f999313da5c05c52e70386b1485b8121a452cb5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
