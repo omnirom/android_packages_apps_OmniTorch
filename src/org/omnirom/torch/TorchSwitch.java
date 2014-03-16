@@ -42,16 +42,15 @@ public class TorchSwitch extends BroadcastReceiver {
                 if (receivingIntent.getAction().equals(TOGGLE_FLASHLIGHT)) {
                         // bright setting can come from intent or from prefs depending on
                         // on what send the broadcast
-                        //
-                        // Unload intent extras if they exist:
-                        boolean bright = receivingIntent.getBooleanExtra("bright", false) |
-                                        mPrefs.getBoolean("bright", false);
-                        boolean strobe = receivingIntent.getBooleanExtra("strobe", false) |
-                                        mPrefs.getBoolean("strobe", false);
-                        boolean sos = receivingIntent.getBooleanExtra("sos", false) |
-                                        mPrefs.getBoolean("sos", false);
+                        boolean bright = receivingIntent.getBooleanExtra("bright",
+                                mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
+                        boolean strobe = receivingIntent.getBooleanExtra("strobe",
+                                mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
+                        boolean sos = receivingIntent.getBooleanExtra("sos",
+                                mPrefs.getBoolean(SettingsActivity.KEY_SOS, false));
+                        int period = receivingIntent.getIntExtra("period",
+                                mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
 
-                        int period = receivingIntent.getIntExtra("period", 200);
                         Intent i = new Intent(context, TorchService.class);
                         if (this.TorchServiceRunning(context)) {
                                 context.stopService(i);
