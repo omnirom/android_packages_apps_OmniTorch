@@ -53,6 +53,7 @@ public class TorchService extends Service {
         private Context mContext;
 
         public void onCreate() {
+                Log.d(TAG, "onCreate");
                 String ns = Context.NOTIFICATION_SERVICE;
                 mNotificationManager = (NotificationManager) getSystemService(ns);
                 mContext = getApplicationContext();
@@ -131,7 +132,7 @@ public class TorchService extends Service {
 
         public int onStartCommand(Intent intent, int flags, int startId) {
 
-                Log.d(TAG, "Starting torch");
+                Log.d(TAG, "onStartCommand");
                 if (intent == null) {
                         stopSelf();
                         return START_NOT_STICKY;
@@ -152,7 +153,7 @@ public class TorchService extends Service {
                 }
 
                 Log.d(TAG, "onStartCommand mBright = " + mBright + " mStrobe = " +
-                                        mStrobe + " mStrobePeriod = " + mStrobePeriod + "mSos = " + mSos);
+                                        mStrobe + " mStrobePeriod = " + mStrobePeriod + " mSos = " + mSos);
 
                 if (mSos){
                         mSosTimer.schedule(mSosTask, 0);                                
@@ -187,11 +188,11 @@ public class TorchService extends Service {
                 mNotificationManager.cancelAll();
                 stopForeground(true);
                 mTorchTimer.cancel();
-        mTorchTimer = null;
+                mTorchTimer = null;
                 mStrobeTimer.cancel();
-        mStrobeTimer = null;
+                mStrobeTimer = null;
                 mSosTimer.cancel();
-        mSosTimer = null;
+                mSosTimer = null;
                 FlashDevice.getInstance(mContext).setFlashMode(FlashDevice.OFF, mBright);
                 updateState(false);
         }
