@@ -31,6 +31,7 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.view.LayoutInflater;
@@ -69,7 +70,8 @@ public class WidgetSettingsActivity extends PreferenceActivity implements OnShar
                 mBrightPref = (CheckBoxPreference) findPreference(KEY_WIDGET_BRIGHT);
                 int brightValue = getResources().getInteger(R.integer.valueHigh);
                 if (brightValue == -1){
-                        getPreferenceScreen().removePreference(mBrightPref);
+                        PreferenceCategory category = (PreferenceCategory) findPreference("+@id:widget_options");
+                        category.removePreference(mBrightPref);
                 }
                 mStrobePref = (CheckBoxPreference) findPreference(KEY_WIDGET_STROBE);
                 mStrobeFrequency = (StrobeFreqPreference) findPreference(KEY_WIDGET_STROBE_FREQ);

@@ -21,7 +21,7 @@
     android:orientation="vertical" >
 
     <PreferenceCategory
-        android:key="@+id/widget_options">
+        android:key="+@id:widget_options">
 
             <CheckBoxPreference
                 android:key="widget_bright"
