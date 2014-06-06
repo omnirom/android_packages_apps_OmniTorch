@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b77b57d_d7004c6e",
+        "filename": "res/values-ca/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000686
+      },
+      "writtenOn": "2014-06-06T09:34:52Z",
+      "side": 1,
+      "message": "to be consistent that should not be capitalized",
+      "revId": "449da641ed03ce5cde0f14905e4fd5f9ca2308f7",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b77b57d_f7f54881",
+        "filename": "res/values-ca/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000686
+      },
+      "writtenOn": "2014-06-06T09:34:52Z",
+      "side": 1,
+      "message": "like here :)",
+      "revId": "449da641ed03ce5cde0f14905e4fd5f9ca2308f7",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
