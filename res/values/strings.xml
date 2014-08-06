@@ -39,7 +39,6 @@
     <string name="about">About</string>
     <string name="widget_options">Widget options</string>
     <string name="setting_title_common">Common</string>
-    <string name="setting_restart">Please, restart the application</string>
     <string name="setting_fullscreen">Fullscreen</string>
     <string name="setting_bright">Bright</string>
     <string name="setting_sos">S.O.S</string>
@@ -48,7 +47,7 @@
     <string name="setting_frequency_dialog">Frequency</string>
     <string name="setting_frequency_hz"> Hz</string>
     <string name="setting_add_widget">Add widget</string>
-
+    <string name="setting_keep_screen_on">Keep screen on</string>
     <string name="not_torch_title">Torch on</string>
     <string name="not_torch_toggle">Turn torch off</string>
 

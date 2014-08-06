@@ -31,147 +31,178 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.util.Log;
 
 public class MainActivity extends Activity {
-        private static final String TAG = "TorchActivity";
+    private static final String TAG = "TorchActivity";
 
-        private TorchWidgetProvider mWidgetProvider;
-        private ImageView mButtonOnView;
-        private ImageView mButtonSosView;
-        private boolean mTorchOn;
-        private Context mContext;
-        private SharedPreferences mPrefs;
+    private TorchWidgetProvider mWidgetProvider;
+    private ImageView mButtonOnView;
+    private boolean mTorchOn;
+    private Context mContext;
+    private SharedPreferences mPrefs;
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener;
 
-        /** Called when the activity is first created. */
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-                // Get preferences
-                this.mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        // Get preferences
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-                // Fullscreen mode
-                if (mPrefs.getBoolean(SettingsActivity.KEY_FULLSCREEN, false)) {
-                        requestWindowFeature(Window.FEATURE_NO_TITLE);
-                        this.getWindow().setFlags(
-                                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                                WindowManager.LayoutParams.FLAG_FULLSCREEN
-                                );
-                }
-                setContentView(R.layout.mainnew);
-                mContext = this.getApplicationContext();
-                mButtonOnView = (ImageView) findViewById(R.id.buttoOnImage);
+        final Window win = getWindow();
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
 
-                mButtonOnView.setOnClickListener(new OnClickListener() {
-                        public void onClick(View v) {
-                                createIntent();
-                        }
-                });
-
-                mTorchOn = false;
-                mWidgetProvider = TorchWidgetProvider.getInstance();
-
-                updateBigButtonState();
+        if (mPrefs.getBoolean(SettingsActivity.KEY_KEEP_SCREEN_ON, false)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
 
-        private void createIntent() {
-                Log.d(TAG, mPrefs.getAll().toString());
-                Intent intent = new Intent(TorchSwitch.TOGGLE_FLASHLIGHT);
-                intent.putExtra("strobe", mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
-                intent.putExtra("period", mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
-                intent.putExtra("bright", mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
-                intent.putExtra("sos", mPrefs.getBoolean(SettingsActivity.KEY_SOS, false));
-                mContext.sendBroadcast(intent);
+        // Fullscreen mode
+        if (mPrefs.getBoolean(SettingsActivity.KEY_FULLSCREEN, false)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
+        setContentView(R.layout.mainnew);
+        mContext = this.getApplicationContext();
+        mButtonOnView = (ImageView) findViewById(R.id.buttoOnImage);
 
-        private void createSosIntent() {
-        if (mTorchOn){
+        mButtonOnView.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                createIntent();
+            }
+        });
+
+        mWidgetProvider = TorchWidgetProvider.getInstance();
+        mPrefsListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            public void onSharedPreferenceChanged(SharedPreferences prefs,
+                    String key) {
+                updatePrefs(prefs, key);
+            }
+        };
+        mPrefs.registerOnSharedPreferenceChangeListener(mPrefsListener);
+
+    }
+
+    private void createIntent() {
+        Intent intent = new Intent(TorchSwitch.TOGGLE_FLASHLIGHT);
+        intent.putExtra("strobe",
+                mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
+        intent.putExtra("period",
+                mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
+        intent.putExtra("bright",
+                mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
+        intent.putExtra("sos",
+                mPrefs.getBoolean(SettingsActivity.KEY_SOS, false));
+        intent.putExtra("activity", false);
+        mContext.sendBroadcast(intent);
+    }
+
+    private void createSosIntent() {
+        if (mTorchOn) {
             // stop it first
             createIntent();
         }
-                Log.d(TAG, mPrefs.getAll().toString());
-                Intent intent = new Intent(TorchSwitch.TOGGLE_FLASHLIGHT);
-                intent.putExtra("strobe", mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
-                intent.putExtra("period", mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
-                intent.putExtra("bright", mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
-                intent.putExtra("sos", true);
-                mContext.sendBroadcast(intent);
-        }
+        Intent intent = new Intent(TorchSwitch.TOGGLE_FLASHLIGHT);
+        intent.putExtra("strobe",
+                mPrefs.getBoolean(SettingsActivity.KEY_STROBE, false));
+        intent.putExtra("period",
+                mPrefs.getInt(SettingsActivity.KEY_STROBE_FREQ, 5));
+        intent.putExtra("bright",
+                mPrefs.getBoolean(SettingsActivity.KEY_BRIGHT, false));
+        intent.putExtra("sos", true);
+        intent.putExtra("activity", false);
+        mContext.sendBroadcast(intent);
+    }
 
-        public void onPause() {
-                this.updateWidget();
-                mContext.unregisterReceiver(mStateReceiver);
-                super.onPause();
-        }
+    public void onPause() {
+        updateWidget();
+        mContext.unregisterReceiver(mStateReceiver);
+        super.onPause();
+    }
 
-        public void onDestroy() {
-                this.updateWidget();
-                super.onDestroy();
-        }
+    public void onResume() {
+        mTorchOn = TorchSwitch.isTorchServiceRunning(this);
+        mContext.registerReceiver(mStateReceiver, new IntentFilter(
+                TorchSwitch.TORCH_STATE_CHANGED));
+        updateWidget();
+        updateBigButtonState();
+        super.onResume();
+    }
 
-        public void onResume() {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case R.id.action_sos:
+            createSosIntent();
+            return true;
+        case R.id.action_about:
+            this.openAboutDialog();
+            return true;
+        case R.id.action_settings:
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivityIfNeeded(intent, -1);
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void openAboutDialog() {
+        LayoutInflater li = LayoutInflater.from(this);
+        View view = li.inflate(R.layout.aboutview, null);
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle(this.getString(R.string.about_title))
+                .setView(view)
+                .setNegativeButton(this.getString(R.string.about_close),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                    int whichButton) {
+                            }
+                        }).show();
+    }
+
+    public void updateWidget() {
+        mWidgetProvider.updateAllStates(mContext);
+    }
+
+    private void updateBigButtonState() {
+        mButtonOnView.setImageResource(mTorchOn ? R.drawable.button_off
+                : R.drawable.button_on);
+    }
+
+    private BroadcastReceiver mStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(TorchSwitch.TORCH_STATE_CHANGED)) {
+                mTorchOn = intent.getIntExtra("state", 0) != 0;
                 updateBigButtonState();
-                this.updateWidget();
-                mContext.registerReceiver(mStateReceiver, new IntentFilter(TorchSwitch.TORCH_STATE_CHANGED));
-                super.onResume();
+            }
         }
+    };
 
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-                MenuInflater inflater = getMenuInflater();
-                inflater.inflate(R.menu.main_menu, menu);
-                return true;
+    public void updatePrefs(SharedPreferences prefs, String key) {
+        final Window win = getWindow();
+        if (prefs.getBoolean(SettingsActivity.KEY_KEEP_SCREEN_ON, false)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            win.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-                switch (item.getItemId()) {
-                case R.id.action_sos:
-                        createSosIntent();
-                        return true;
-                case R.id.action_about:
-                        this.openAboutDialog();
-                        return true;
-                case R.id.action_settings:
-                        Intent intent = new Intent(this, SettingsActivity.class);
-                        startActivityIfNeeded(intent, -1);
-                default:
-                        return super.onOptionsItemSelected(item);
-                }
+        if (prefs.getBoolean(SettingsActivity.KEY_FULLSCREEN, false)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else {
+            win.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-
-        private void openAboutDialog() {
-                LayoutInflater li = LayoutInflater.from(this);
-                View view = li.inflate(R.layout.aboutview, null);
-                new AlertDialog.Builder(MainActivity.this).setTitle(this.getString(R.string.about_title)).setView(view)
-                .setNegativeButton(this.getString(R.string.about_close), new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                        }
-                }).show();
-        }
-
-        public void updateWidget() {
-                this.mWidgetProvider.updateAllStates(mContext);
-        }
-
-        private void updateBigButtonState() {
-                mButtonOnView.setImageResource(mTorchOn ? R.drawable.button_off : R.drawable.button_on);
-        }
-
-        private BroadcastReceiver mStateReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                        if (intent.getAction().equals(TorchSwitch.TORCH_STATE_CHANGED)) {
-                                mTorchOn = intent.getIntExtra("state", 0) != 0;
-                                updateBigButtonState();
-                        }
-                }
-        };
+    }
 }

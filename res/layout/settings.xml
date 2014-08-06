@@ -46,6 +46,11 @@
                 android:key="fullscreen"
                 android:title="@string/setting_fullscreen"
                 android:defaultValue="false" />
+
+            <CheckBoxPreference
+                android:key="keep_screen_on"
+                android:title="@string/setting_keep_screen_on"
+                android:defaultValue="false" />
                     
     </PreferenceCategory>
 
