@@ -48,7 +48,7 @@
     <string name="setting_frequency_dialog">Frequency</string>
     <string name="setting_frequency_hz"> Hz</string>
     <string name="setting_add_widget">Add widget</string>
-
+    <string name="setting_keep_screen_on">Keep screen on</string>
     <string name="not_torch_title">Torch on</string>
     <string name="not_torch_toggle">Turn torch off</string>
 
