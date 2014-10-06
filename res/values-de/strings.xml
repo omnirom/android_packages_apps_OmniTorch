@@ -23,6 +23,7 @@
 
     <string name="description">Dieses Programm beeinflusst die Kamera LED.\n</string>
     <string name="warning">Warnung: Das Benutzen der LED über einen längeren Zeitraum kann diese überhitzen.\n\nVolle Helligkeit &#8220;immer an&#8221; wurde für eine halbe Stunde getestet, aber es besteht das Risiko, das die LED beschädigt wird.\n</string>
+    <string name="license">Code ursprünglich aus Nexus One Torch von Ben Buxton, veröffentlicht unter GPL, v3.\nhttp://n1torch.googlecode.com/\n\nAngepasst auf OmniRom durch Max Weninger</string>
     <string name="warning_label">Warnung</string>
     <string name="brightwarn">Volle Helligkeit wurde erfolgreich für eine halbe Stunde getestet, aber nach 45 Minuten wurde die LED ziemlich heiß und begann zu flackern. Langzeiteffekte sind nicht bekannt.\n\nWähle &#8220;Akzeptieren&#8221; wenn du es auf eigenes Risiko benutzen willst.</string>
     <string name="brightwarn_negative">Nein Danke</string>
@@ -47,7 +48,7 @@
     <string name="setting_frequency_dialog">Frequenz</string>
     <string name="setting_frequency_hz"> Hz</string>
     <string name="setting_add_widget">Widget hinzufügen</string>
-
+    <string name="setting_keep_screen_on">Bildschirm aktiv lassen</string>
     <string name="not_torch_title">Taschenlampe an</string>
     <string name="not_torch_toggle">Schalte Taschenlampe aus</string>
 
