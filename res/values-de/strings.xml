@@ -47,7 +47,7 @@
     <string name="setting_frequency_dialog">Frequenz</string>
     <string name="setting_frequency_hz"> Hz</string>
     <string name="setting_add_widget">Widget hinzufügen</string>
-
+    <string name="setting_keep_screen_on">Display nicht abschalten</string>
     <string name="not_torch_title">Taschenlampe an</string>
     <string name="not_torch_toggle">Schalte Taschenlampe aus</string>
 
