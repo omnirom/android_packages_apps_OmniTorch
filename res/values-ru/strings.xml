@@ -36,7 +36,6 @@
     <string name="about">О программе</string>
     <string name="widget_options">Параметры виджета</string>
     <string name="setting_title_common">Общие</string>
-    <string name="setting_restart">Пожалуйста, перезапустите программу</string>
     <string name="setting_fullscreen">Полноэкранный режим</string>
     <string name="setting_bright">Полная яркость</string>
     <string name="setting_sos">S.O.S</string>

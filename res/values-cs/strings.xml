@@ -39,7 +39,6 @@
     <string name="about">O aplikaci</string>
     <string name="widget_options">Nastavení widgetu</string>
     <string name="setting_title_common">Obecné</string>
-    <string name="setting_restart">Prosím, restartujte aplikaci</string>
     <string name="setting_fullscreen">Celá obrazovka</string>
     <string name="setting_bright">Vysoký jas</string>
     <string name="setting_sos">S.O.S</string>

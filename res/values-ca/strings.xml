@@ -39,7 +39,6 @@
     <string name="about">Sobre</string>
     <string name="widget_options">Opcions de widget</string>
     <string name="setting_title_common">Comú</string>
-    <string name="setting_restart">Per favor, reinicieu l\'aplicació</string>
     <string name="setting_fullscreen">Pantalla completa</string>
     <string name="setting_bright">Brillantor màxima</string>
     <string name="setting_sos">S.O.S</string>

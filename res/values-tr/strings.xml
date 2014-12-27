@@ -39,7 +39,6 @@
     <string name="about">Hakkında</string>
     <string name="widget_options">Widget Seçenekleri</string>
     <string name="setting_title_common">Ortak</string>
-    <string name="setting_restart">Lütfen uygulamayı yeniden başlatın</string>
     <string name="setting_fullscreen">Tam Ekran</string>
     <string name="setting_bright">Parlak</string>
     <string name="setting_sos">S.O.S</string>

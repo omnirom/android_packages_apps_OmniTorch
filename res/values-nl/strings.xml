@@ -39,7 +39,6 @@
     <string name="about">Over</string>
     <string name="widget_options">Widget instellingen</string>
     <string name="setting_title_common">Algemeen</string>
-    <string name="setting_restart">Herstart de applicatie</string>
     <string name="setting_fullscreen">Volledig scherm</string>
     <string name="setting_bright">Helder</string>
     <string name="setting_sos">S.O.S</string>

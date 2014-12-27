@@ -38,7 +38,6 @@
     <string name="about">Über</string>
     <string name="widget_options">Widget Optionen</string>
     <string name="setting_title_common">Allgemeine Einstellungen</string>
-    <string name="setting_restart">Bitte die Anwendung neu starten</string>
     <string name="setting_fullscreen">Vollbildschirm</string>
     <string name="setting_bright">Volle Helligkeit</string>
     <string name="setting_sos">S.O.S</string>

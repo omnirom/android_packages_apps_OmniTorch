@@ -39,7 +39,6 @@
     <string name="about">Acerca de</string>
     <string name="widget_options">Opciones de Widget</string>
     <string name="setting_title_common">Común</string>
-    <string name="setting_restart">Por favor, reinicie la aplicación</string>
     <string name="setting_fullscreen">Pantalla completa</string>
     <string name="setting_bright">Brillo máximo</string>
     <string name="setting_sos">S.O.S</string>

@@ -33,7 +33,6 @@
     <string name="about">Sobre</string>
     <string name="widget_options">Configurações do widget</string>
     <string name="setting_title_common">Comum</string>
-    <string name="setting_restart">Por favor, reinicie a aplicação</string>
     <string name="setting_fullscreen">Tela cheia</string>
     <string name="setting_bright">Brilho</string>
     <string name="setting_sos">S.O.S.</string>

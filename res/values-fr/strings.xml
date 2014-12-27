@@ -36,7 +36,6 @@
     <string name="about">À propos</string>
     <string name="widget_options">Options du widget</string>
     <string name="setting_title_common">Général</string>
-    <string name="setting_restart">Redémarrer l\'application s\'il vous plaît</string>
     <string name="setting_fullscreen">Plein écran</string>
     <string name="setting_bright">Luminosité</string>
     <string name="setting_sos">S.O.S</string>

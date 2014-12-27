@@ -36,7 +36,6 @@
     <string name="about">Om</string>
     <string name="widget_options">Widgetinställningar</string>
     <string name="setting_title_common">Allmänt</string>
-    <string name="setting_restart">Var god starta om appen</string>
     <string name="setting_fullscreen">Helskärm</string>
     <string name="setting_bright">Maximal ljusstyrka</string>
     <string name="setting_sos">SOS</string>
