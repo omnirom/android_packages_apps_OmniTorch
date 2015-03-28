@@ -20,38 +20,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <PreferenceCategory
-        android:key="settings">
+        <CheckBoxPreference
+            android:key="bright"
+            android:title="@string/setting_bright"
+            android:defaultValue="false" />
 
-            <CheckBoxPreference
-                android:key="bright"
-                android:title="@string/setting_bright"
-                android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="strobe"
+            android:title="@string/setting_strobe"
+            android:defaultValue="false" />    
 
-            <CheckBoxPreference
-                android:key="strobe"
-                android:title="@string/setting_strobe"
-                android:defaultValue="false" />    
+        <org.omnirom.torch.StrobeFreqPreference
+            android:key="strobe_freq"
+            android:title="@string/setting_frequency_title" />
 
-            <org.omnirom.torch.StrobeFreqPreference
-                android:key="strobe_freq"
-                android:title="@string/setting_frequency_title" />
+        <CheckBoxPreference
+            android:key="sos"
+            android:title="@string/setting_sos"
+            android:defaultValue="false" />
 
-            <CheckBoxPreference
-                android:key="sos"
-                android:title="@string/setting_sos"
-                android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="fullscreen"
+            android:title="@string/setting_fullscreen"
+            android:defaultValue="false" />
 
-            <CheckBoxPreference
-                android:key="fullscreen"
-                android:title="@string/setting_fullscreen"
-                android:defaultValue="false" />
-
-            <CheckBoxPreference
-                android:key="keep_screen_on"
-                android:title="@string/setting_keep_screen_on"
-                android:defaultValue="false" />
-                    
-    </PreferenceCategory>
+        <CheckBoxPreference
+            android:key="keep_screen_on"
+            android:title="@string/setting_keep_screen_on"
+            android:defaultValue="false" />
 
 </PreferenceScreen>  
